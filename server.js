@@ -3,6 +3,7 @@ const bprs = require("body-parser");
 const express = require('express');
 const mongoose = require("mongoose");
 const passport = require("passport");
+const path = require("path");
 
 
 //api routes
@@ -35,6 +36,13 @@ app.use("/api/critics", critics);
 app.use("/api/places", places);
 
 //using static files
+if(process.env.NODE_ENV === "production") {
+    app.use(express.static('client/build'));
+    //serve static file
+    app.get('*', (req, res) => {
+        res.sendDate(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
+}
 
 //initializing server
 const port = process.env.PORT || 5000;
