@@ -1,0 +1,118 @@
+.login, .register {
+    width: 100vw;
+    height: 100%;
+    padding: 3rem;
+
+    &__container {
+        margin: 0 auto;
+        width: 450px;
+        position: relative;
+        padding: 3.3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: {
+            width: 1px;
+            style: solid;
+            color: $primary-main;
+            radius: 1rem;
+        };
+
+        &--close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: $primary-main;
+        }
+    }
+
+    &__facebook {
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+
+.comment-form, .post-critic {
+    width: 100%;
+    padding: 1rem 4rem;
+    position: relative;
+    background-color: rgba($super-dark, 0.7);
+
+    &__container {
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+        padding: 2.5rem;
+        background-color: $white-color;
+        border: {
+            width: 1px;
+            style: solid;
+            color: $primary-main;
+            radius: 1.5rem;
+        };
+        &--close {
+            display: none;
+            /*
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: $primary-main;
+            */
+        }
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__group {
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
+
+    &__feedback{
+        &--valid {
+            font-size: $small-size;
+            color: $white-color;
+        }
+
+        &--invalid {
+            font-size: $small-size;
+            color: $error-main;
+        }
+    }
+
+    &__input, &__textarea {
+        width: 100%;
+        padding: 0.9rem 0.5rem;
+        font-size: $default-size;
+        border-radius: 0.75rem;
+
+        &--valid {
+            border: 1px solid $primary-main;
+        }
+
+        &--invalid {
+            border: 1px solid $error-main;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        font-size: 100%;
+        height: 7rem;
+    }
+
+    &__redirect {
+        display: block;
+        font-size: $small-size;
+        margin: 0.5rem 0;
+        &--link {
+            color: $primary-dark;
+            text-decoration: none;
+        }
+    }
+}

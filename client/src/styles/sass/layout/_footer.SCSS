@@ -1,0 +1,61 @@
+.footer {
+    min-height: 40vh;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($primary-main, 0.65);
+
+    &__expression {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+
+        &--title {
+            width: 80%;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: $tertiary-size;
+            color: $white-color;
+        }
+    }
+
+    &__links {
+        align-self: stretch;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        &--collection {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        &--title {
+            margin-bottom: 1rem;
+            color: $primary-light;
+            font:{
+                size: $primary-plus;
+                weight: bold;
+            }
+        }
+
+        &--item {
+            color: $white-color;
+            text-decoration: none;
+            margin-bottom: 0.6rem;
+
+            &:hover {
+                color: $primary-light;
+            }
+        }
+
+    }
+}

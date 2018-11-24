@@ -1,0 +1,78 @@
+.landing{
+    width: 100%;
+    min-height: 100vh;
+    background: {
+        image: url("../../img/alcohol.jpg");
+        repeat: no-repeat;
+        size: cover;
+        attachment: fixed;
+    }
+}
+
+.hero {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    padding: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($primary-main, 0.65);
+
+    &__title {
+        color: $white-color;
+        font-size: $primary-size;
+        text-align: center;
+        margin-bottom: $secondary-size;
+    }
+
+    &__search {
+        position: relative;
+        height: 3rem;
+        margin-bottom: $secondary-size;
+        border: {
+            width: 1px;
+            style: solid;
+            color: $white-color;
+            radius: 12px;
+        }
+
+        &-icon {
+            height: 100%;
+            width: 2.5rem;
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: $default-sub;
+            color: $primary-dark;
+        }
+
+        &-bar {
+            padding: 10px 2.5rem;
+            height: 100%;
+            width: 50vw;
+            font-size: $default-sub;
+            border: {
+                style: none;
+                radius: 10px;
+            }
+
+            &::placeholder {
+                color: $primary-dark;
+            }
+
+            &:focus, &:hover{
+                outline: none;
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
+    }
+}

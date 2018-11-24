@@ -1,0 +1,53 @@
+.button {
+    display: inline-block;
+    background-color: $white-color;
+    color: $primary-main;
+    text:{
+        decoration: none;
+        align: center;
+    }
+    border:{
+        style: solid;
+        color: $primary-main;
+        width: 1px;
+    }
+
+    &-big {
+        padding: 0.7rem 4rem;
+        border-radius: 2rem 0;
+        font-size: $default-sub;
+    }
+
+    &-submit {
+        width: 70%;
+        padding: 0.5rem 2rem;
+        margin: 1.5rem 0 0.5rem 0;
+        border-radius: 1.4rem 0;
+        font:{
+            weight: bold;
+            size: $default-size;
+        }
+        background-color: $primary-main;
+        color: $white-color;
+
+    }
+
+    &-small {
+        padding: 0.3rem 2rem;
+        border-radius: 1.2rem 0;
+        font-size: $small-size;
+    }
+
+    &-like,&-delete {
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.7rem 2px;
+        &:hover {
+            background-color: $primary-main;
+            color: $error-main;
+        }
+
+        &.liked {
+            color: $error-main;
+        }
+    }
+}

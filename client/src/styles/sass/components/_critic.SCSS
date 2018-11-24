@@ -1,0 +1,53 @@
+.critic, .place {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background: {
+        image: url("../../img/bar.jpg");
+        repeat: no-repeat;
+        size: cover;
+        attachment: fixed;
+    }
+
+    &__container {
+        position: relative;
+        padding: 4rem;
+        background-color: rgba($super-dark, 0.7);
+        .button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
+
+    &__item {
+        padding: 1rem 2.5rem;
+        background-color: $white-color;
+        border-radius: 1rem;
+
+        &--title, &--text {
+            margin: 0.3rem 0 ;
+        }
+
+        &--title {
+            position: relative;
+            font-size: $secondary-size;
+        }
+
+        &--user {
+            margin-left: 1.5rem;
+            font-size: $primary-plus;
+        }
+
+        &--class {
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            color: $grey-main-alter;
+            font: {
+                style: italic;
+                size: $default-size;
+            }
+        }
+    }
+}
